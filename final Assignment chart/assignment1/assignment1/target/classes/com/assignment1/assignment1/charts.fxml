@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment1.assignment1.Controller">
+   <top>
+      <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+
+                  <MenuItem fx:id="pieChart" mnemonicParsing="false" onAction="#handleShowPieChart" text="Show Pie Chart" />
+                  <MenuItem fx:id="table" mnemonicParsing="false" onAction="#handleShowTable" text="Show Table" />
+            
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem fx:id="updateData" mnemonicParsing="false" onAction="#handleUpdateData" text="Update Data" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TableView fx:id="tableView" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="312.0" prefWidth="523.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="index" prefWidth="75.0" text="Sr. No." />
+          <TableColumn fx:id="language" prefWidth="153.59998321533203" text="Language" />
+            <TableColumn fx:id="percentage" prefWidth="294.3999938964844" text="Importance by percentage" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
